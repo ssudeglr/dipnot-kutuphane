@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Giris Yap | DIPNOT{% endblock %}
+
+{% block content %}
+<section class="bestseller-section" style="min-height:55vh;">
+    <div class="bestseller-header">
+        <div class="bestseller-sub">DIPNOT. Kutuphane</div>
+        <h2 class="section-title">GIRIS YAP</h2>
+    </div>
+
+    <div class="auth-card">
+        {% if request.args.get("registered") %}
+        <div class="status-box success">Kayit basarili. Simdi giris yapabilirsiniz.</div>
+        {% endif %}
+        {% if error %}
+        <div class="status-box">{{ error }}</div>
+        {% endif %}
+        <form method="post" class="auth-form">
+            <input type="text" name="username_or_email" placeholder="Kullanici Adi veya E-posta" required>
+            <input type="password" name="password" placeholder="Sifre" required>
+            <button type="submit" class="nav-auth-btn" style="width:100%; text-align:center;">Giris Yap</button>
+        </form>
+        <p style="margin-top:0.8rem;">Hesabiniz yok mu? <a href="{{ url_for('register') }}">Kayit Ol</a></p>
+    </div>
+</section>
+{% endblock %}

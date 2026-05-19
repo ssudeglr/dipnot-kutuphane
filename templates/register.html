@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Kayit Ol | DIPNOT{% endblock %}
+
+{% block content %}
+<section class="bestseller-section" style="min-height:55vh;">
+    <div class="bestseller-header">
+        <div class="bestseller-sub">DIPNOT. Kutuphane</div>
+        <h2 class="section-title">KAYIT OL</h2>
+    </div>
+
+    <div class="auth-card">
+        {% if error %}
+        <div class="status-box">{{ error }}</div>
+        {% endif %}
+        <form method="post" class="auth-form">
+            <input type="text" name="username" placeholder="Kullanici Adi" required>
+            <input type="email" name="email" placeholder="E-posta" required>
+            <input type="password" name="password" placeholder="Sifre (en az 6 karakter)" required>
+            <input type="password" name="password_confirm" placeholder="Sifre Tekrar" required>
+            <button type="submit" class="nav-auth-btn" style="width:100%; text-align:center;">Kayit Ol</button>
+        </form>
+        <p style="margin-top:0.8rem;">Zaten hesabiniz var mi? <a href="{{ url_for('login') }}">Giris Yap</a></p>
+    </div>
+</section>
+{% endblock %}

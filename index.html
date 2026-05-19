@@ -1,0 +1,985 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DİPNOT Kutuphane</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-flex">
+            <div class="nav-left">
+                <span class="logo-box">
+                    <span class="logo-main">DİPNOT.</span>
+                    <span class="logo-sub">KUTUPHANE</span>
+                </span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#" id="allBooksBtn">Kitaplar</a></li>
+                <li><a href="#events" id="eventsBtn">Etkinlikler</a></li>
+                <li><a href="#about" id="aboutBtn">Hakkımızda</a></li>
+                <li><a href="#contact">İletişim</a></li>
+            </ul>
+            <div class="nav-icons">
+                <button id="themeToggleBtn" class="theme-toggle" type="button" aria-label="Temayi degistir">🌙 Gece</button>
+                <span class="nav-icon user" id="loginBtn">
+                    <svg width="22" height="22" fill="none" stroke="#163A5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="7" r="4"/><path d="M5.5 21a8.38 8.38 0 0 1 13 0"/></svg>
+                    <span class="nav-login" id="loginText" data-key="login">Giris Yap</span>
+                </span>
+                <span class="nav-icon cart" id="cartBtn" style="position:relative; cursor:pointer;">
+                    <svg width="22" height="22" fill="none" stroke="#163A5F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+                    <span id="cartCount" style="position:absolute; top:-7px; right:-10px; background:#163A5F; color:#fff; min-width:17px; height:17px; border-radius:999px; font-size:11px; line-height:17px; text-align:center; padding:0 4px;">0</span>
+                </span>
+            </div>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="hero-bg">
+            <div class="hero-text">
+                <h1 data-key="heroTitle">BIR KOLTUK,<br>GUZEL BIR KITAP,<br>VE SEN.</h1>
+                <p data-key="heroDesc">Yeni favori kitabini kesfet, kutuphaneni kolayca yonet.</p>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=80" alt="Koltuk ustundeki kitaplar">
+            </div>
+        </div>
+    </header>
+    <!-- Bestsellers Carousel -->
+    <section class="bestseller-section" id="bookstore">
+        <div class="bestseller-header">
+            <div class="bestseller-sub">DİPNOT. Kutuphane</div>
+            <h2 class="section-title">EN COK SATANLAR</h2>
+        </div>
+        <div class="book-carousel" id="bookCarousel"></div>
+    </section>
+    <!-- Recommended Books -->
+    <section class="recommended-section">
+        <div class="recommended-header">
+            <div class="recommended-sub">Bu Ayin</div>
+            <h2 class="section-title">ONERILEN KITAPLAR</h2>
+        </div>
+        <div class="recommended-grid" id="recommendedGrid"></div>
+    </section>
+    <!-- Big Slogan -->
+    <section class="slogan-section">
+        <h2 class="big-slogan">COK KITAP DIYE BIR SEY YOKTUR</h2>
+        <button class="btn-outline" id="readStoryBtn">Hikayemizi Oku</button>
+    </section>
+    <!-- Event/Book Launch -->
+    <section class="event-section" id="events">
+        <div class="event-content">
+            <div class="event-info">
+                <div class="event-title">Yaklasan Etkinlik</div>
+                <h2 class="event-main">KITAP TANITIMI</h2>
+                <div class="event-desc">AILOO Diyarinin tanitimi</div>
+                <div class="event-author">Yazar: Mark Walker</div>
+                <div class="event-date">12 Temmuz 2035, 19:00</div>
+                <div class="event-location">500 Terry Francois Caddesi, San Francisco, CA, ABD</div>
+                <button class="btn-outline">KATILIM ICIN KAYDOL</button>
+            </div>
+            <div class="event-image">
+                <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=400&q=80" alt="Kitap tanitimi">
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="footer-container">
+            <div class="footer-col">
+                <div class="footer-logo">DİPNOT. Kutuphane</div>
+                <div>500 Terry Francois Cd.<br>Istanbul, Turkiye</div>
+                <div>+90 555 123 4567</div>
+                <div>info@dipnotlibrary.com</div>
+            </div>
+            <div class="footer-col">
+                <div class="footer-title">Magaza</div>
+                <div>Sık Sorulan Sorular</div>
+                <div>Kargo ve Iade</div>
+                <div>Magaza Politikasi</div>
+                <div>Odeme Yontemleri</div>
+            </div>
+            <div class="footer-col">
+                <div class="footer-title">Sosyal Medya</div>
+                <div>Facebook</div>
+                <div>Twitter</div>
+                <div>Instagram</div>
+                <div>Pinterest</div>
+            </div>
+            <div class="footer-col">
+                <div class="footer-title">Yenilikleri Ilk Sen Ogren</div>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 DİPNOT. Kutuphane. Seninle guclu.</div>
+    </footer>
+    <!-- Admin Giriş Modalı -->
+    <div class="modal" id="adminLoginModal" tabindex="-1" style="display:none; position:fixed; z-index:9999; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); align-items:center; justify-content:center;">
+      <div style="background:#fff; border-radius:12px; max-width:350px; width:90%; padding:2rem; box-shadow:0 8px 32px rgba(22,58,95,0.13); position:relative;">
+        <button id="closeAdminLoginModal" style="position:absolute; top:12px; right:16px; background:none; border:none; font-size:1.5rem; color:#163A5F; cursor:pointer;">&times;</button>
+        <h2 style="text-align:center; color:#163A5F; margin-bottom:1.2rem;">Admin Girişi</h2>
+        <form id="adminLoginForm">
+          <input type="text" id="adminUsername" placeholder="Kullanıcı Adı" required style="width:100%;margin-bottom:1rem;padding:0.6rem;border-radius:6px;border:1px solid #ccc;">
+          <input type="password" id="adminPassword" placeholder="Şifre" required style="width:100%;margin-bottom:1.2rem;padding:0.6rem;border-radius:6px;border:1px solid #ccc;">
+          <button type="submit" style="width:100%;background:#163A5F;color:#fff;padding:0.7rem 0;border:none;border-radius:6px;font-weight:600;cursor:pointer;">Giriş Yap</button>
+        </form>
+        <button id="openRegisterModal" type="button" style="width:100%;margin-top:0.7rem;background:#fff;color:#163A5F;padding:0.7rem 0;border:1px solid #163A5F;border-radius:6px;font-weight:600;cursor:pointer;">Kayıt Ol</button>
+        <div id="adminLoginError" style="color:#c00; text-align:center; margin-top:0.7rem; display:none;">Hatalı giriş!</div>
+      </div>
+    </div>
+    <!-- Kayıt Ol Modalı -->
+    <div class="modal" id="registerModal" tabindex="-1" style="display:none; position:fixed; z-index:10001; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); align-items:center; justify-content:center;">
+      <div style="background:#fff; border-radius:12px; max-width:350px; width:90%; padding:2rem; box-shadow:0 8px 32px rgba(22,58,95,0.13); position:relative;">
+        <button id="closeRegisterModal" style="position:absolute; top:12px; right:16px; background:none; border:none; font-size:1.5rem; color:#163A5F; cursor:pointer;">&times;</button>
+        <h2 style="text-align:center; color:#163A5F; margin-bottom:1.2rem;">Kayıt Ol</h2>
+        <form id="registerForm">
+          <input type="text" id="registerUsername" placeholder="Kullanıcı Adı" required style="width:100%;margin-bottom:0.8rem;padding:0.6rem;border-radius:6px;border:1px solid #ccc;">
+          <input type="password" id="registerPassword" placeholder="Şifre" required style="width:100%;margin-bottom:0.8rem;padding:0.6rem;border-radius:6px;border:1px solid #ccc;">
+          <input type="password" id="registerPasswordConfirm" placeholder="Şifre (Tekrar)" required style="width:100%;margin-bottom:1.2rem;padding:0.6rem;border-radius:6px;border:1px solid #ccc;">
+          <button type="submit" style="width:100%;background:#163A5F;color:#fff;padding:0.7rem 0;border:none;border-radius:6px;font-weight:600;cursor:pointer;">Kayıt Ol</button>
+        </form>
+        <div id="registerError" style="color:#c00; text-align:center; margin-top:0.7rem; display:none;"></div>
+        <div id="registerSuccess" style="color:#1c7a1c; text-align:center; margin-top:0.7rem; display:none;">Kayıt başarılı! Giriş yapabilirsiniz.</div>
+      </div>
+    </div>
+    <!-- Kitap Detay Modalı -->
+    <div class="modal" id="bookDetailModal" tabindex="-1" style="display:none; position:fixed; z-index:10002; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); align-items:center; justify-content:center;">
+      <div style="background:#fff; border-radius:12px; max-width:420px; width:92%; padding:1.5rem; box-shadow:0 8px 32px rgba(22,58,95,0.13); position:relative;">
+        <button id="closeBookDetailModal" style="position:absolute; top:12px; right:16px; background:none; border:none; font-size:1.5rem; color:#163A5F; cursor:pointer;">&times;</button>
+        <h3 id="bookDetailTitle" style="color:#163A5F; margin-bottom:0.7rem;">Kitap Detayi</h3>
+        <div id="bookDetailAuthor" style="margin-bottom:0.4rem; color:#163A5F;"></div>
+        <div id="bookDetailPrice" style="margin-bottom:0.8rem; color:#163A5F; font-weight:600;"></div>
+        <button id="bookFavoriteBtn" type="button" style="margin-bottom:0.8rem; padding:0.4rem 0.7rem; border:1px solid #163A5F; border-radius:6px; background:#fff; color:#163A5F; cursor:pointer;">Favorilere Ekle</button>
+        <p id="bookDetailText" style="color:#333; line-height:1.4;">Bu kitap hakkinda detayli bilgi.</p>
+        <div style="margin-top:1rem;">
+          <div style="font-weight:700; color:#163A5F; margin-bottom:0.4rem;">Yorum ve Puan</div>
+          <form id="bookReviewForm">
+            <select id="bookReviewRating" style="margin-bottom:0.4rem; padding:0.4rem; border-radius:6px; border:1px solid #ccc;">
+              <option value="5">5 Yildiz</option>
+              <option value="4">4 Yildiz</option>
+              <option value="3">3 Yildiz</option>
+              <option value="2">2 Yildiz</option>
+              <option value="1">1 Yildiz</option>
+            </select>
+            <textarea id="bookReviewText" rows="2" placeholder="Yorumunuzu yazin" style="width:100%; margin-bottom:0.4rem; padding:0.5rem; border-radius:6px; border:1px solid #ccc;"></textarea>
+            <button type="submit" style="padding:0.4rem 0.7rem; border:1px solid #163A5F; border-radius:6px; background:#163A5F; color:#fff; cursor:pointer;">Yorum Ekle</button>
+          </form>
+          <div id="bookReviewList" style="margin-top:0.6rem;"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Hikaye Modalı -->
+    <div class="modal" id="storyModal" tabindex="-1" style="display:none; position:fixed; z-index:10004; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); align-items:center; justify-content:center;">
+      <div style="background:#fff; border-radius:12px; max-width:760px; width:94%; padding:1.6rem; box-shadow:0 8px 32px rgba(22,58,95,0.13); position:relative; max-height:80vh; overflow:auto;">
+        <button id="closeStoryModal" style="position:absolute; top:12px; right:16px; background:none; border:none; font-size:1.5rem; color:#163A5F; cursor:pointer;">&times;</button>
+        <h3 style="color:#163A5F; margin-bottom:1rem;">Sınırları Olmayan Bir Yolculuk</h3>
+        <p style="line-height:1.6; color:#2b2b2b; margin-bottom:0.9rem;">
+          Bizim icin kitaplar, raflari dolduran kagit yiginlari degil; her biri yeni bir dunyanin kapisidir. "Cok kitap diye bir sey yoktur" diyoruz cunku merakin siniri, ogrenmenin sonu ve hayal gucunun bir kotasi olamaz.
+        </p>
+        <p style="line-height:1.6; color:#2b2b2b; margin:0;">
+          Hikayemiz, bir kitabin kapagini actiginizda hissettiginiz o essiz heyecanla basladi. Amacimiz, her okurun kendi icsel yolculugunda ona eslik edecek o "dogru" kitabi bulmasini saglamak. Biz, kutuphanelerin hic dolmamasini, zihinlerin ise her zaman ac kalmasini kutlayan bir topluluguz. Hos geldiniz, burada her zaman bir kitaba daha yer var.
+        </p>
+      </div>
+    </div>
+    <!-- Hakkimizda Modalı -->
+    <div class="modal" id="aboutModal" tabindex="-1" style="display:none; position:fixed; z-index:10005; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); align-items:center; justify-content:center;">
+      <div style="background:#fff; border-radius:12px; max-width:760px; width:94%; padding:1.6rem; box-shadow:0 8px 32px rgba(22,58,95,0.13); position:relative; max-height:80vh; overflow:auto;">
+        <button id="closeAboutModal" style="position:absolute; top:12px; right:16px; background:none; border:none; font-size:1.5rem; color:#163A5F; cursor:pointer;">&times;</button>
+        <h3 style="color:#163A5F; margin-bottom:1rem;">Hakkımızda</h3>
+        <p style="line-height:1.6; color:#2b2b2b; margin-bottom:0.9rem;">
+          Bilginin paylaştıkça çoğaldığına ve bir kütüphanenin asla "yeterince dolu" olamayacağına inanıyoruz. Yolculuğumuz, kitapların sadece kağıt ve mürekkepten ibaret olmadığını, her birinin yeni bir dünyaya açılan bir kapı olduğunu fark etmemizle başladı.
+        </p>
+        <p style="line-height:1.6; color:#2b2b2b; margin:0;">
+          Amacımız, okurları sadece popüler eserlerle değil, ufuk açan fikirlerle ve unutulmaz hikayelerle buluşturmak. Bizim için her kitap bir keşif, her okur ise bu sonsuz yolculuğun bir parçasıdır. Raflarımızda her zaman yeni fikirlere ve meraklı zihinlere yer var.
+        </p>
+      </div>
+    </div>
+    <!-- Etkinlikler Modalı -->
+    <div class="modal" id="eventsModal" tabindex="-1" style="display:none; position:fixed; z-index:10007; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.45); align-items:center; justify-content:center;">
+      <div class="events-modal-content">
+        <button id="closeEventsModal" style="position:absolute; top:12px; right:16px; background:none; border:none; font-size:1.5rem; color:#163A5F; cursor:pointer;">&times;</button>
+        <h3 class="events-modal-title">Yaklasan Etkinlikler</h3>
+        <div class="events-list">
+          <div class="event-item-card">
+            <div class="event-item-head">Yazar Bulusmasi</div>
+            <div class="event-item-desc">Klasik ve modern Turk romani uzerine sohbet ve imza.</div>
+            <div class="event-item-meta">Konuk: Buket Uzuner</div>
+            <div class="event-item-meta">17 Mayis 2026 - 18:30</div>
+            <div class="event-item-meta">Dipnot Etkinlik Salonu</div>
+          </div>
+          <div class="event-item-card">
+            <div class="event-item-head">Kitap Kulubu Aylik Oturumu</div>
+            <div class="event-item-desc">Bu ayin kitabi: Tutunamayanlar - okuma notlari ve tartisma.</div>
+            <div class="event-item-meta">Moderatör: Eda Akin</div>
+            <div class="event-item-meta">22 Mayis 2026 - 19:00</div>
+            <div class="event-item-meta">Okuma Odasi 2</div>
+          </div>
+          <div class="event-item-card">
+            <div class="event-item-head">Cocuklar Icin Masal Saati</div>
+            <div class="event-item-desc">7-11 yas grubuna uygun interaktif okuma ve cizim atölyesi.</div>
+            <div class="event-item-meta">Egitmen: Ipek Sahin</div>
+            <div class="event-item-meta">25 Mayis 2026 - 14:00</div>
+            <div class="event-item-meta">Cocuk Kutuphanesi</div>
+          </div>
+          <div class="event-item-card">
+            <div class="event-item-head">Yeni Cikanlar Tanitim Gecesi</div>
+            <div class="event-item-desc">Ayin yeni kitaplari, oneriler ve mini cekilis.</div>
+            <div class="event-item-meta">Sunum: Dipnot Ekibi</div>
+            <div class="event-item-meta">30 Mayis 2026 - 20:00</div>
+            <div class="event-item-meta">Ana Salon</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Sepet Modalı -->
+    <div class="modal" id="cartModal" tabindex="-1" style="display:none; position:fixed; z-index:10003; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); align-items:center; justify-content:center;">
+      <div style="background:#fff; border-radius:12px; max-width:460px; width:92%; padding:1.5rem; box-shadow:0 8px 32px rgba(22,58,95,0.13); position:relative;">
+        <button id="closeCartModal" style="position:absolute; top:12px; right:16px; background:none; border:none; font-size:1.5rem; color:#163A5F; cursor:pointer;">&times;</button>
+        <h3 style="color:#163A5F; margin-bottom:0.8rem;">Sepetim</h3>
+        <div id="cartList" style="max-height:320px; overflow:auto; margin-bottom:0.8rem;"></div>
+        <div id="cartTotal" style="font-weight:700; color:#163A5F;">Toplam: 0 TL</div>
+        <button id="checkoutBtn" type="button" style="width:100%; margin-top:0.9rem; background:#163A5F; color:#fff; padding:0.7rem 0; border:none; border-radius:6px; font-weight:600; cursor:pointer;">Odeme Yap</button>
+      </div>
+    </div>
+    <!-- Odeme Modalı -->
+    <div class="modal" id="paymentModal" tabindex="-1" style="display:none; position:fixed; z-index:10006; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); align-items:center; justify-content:center;">
+      <div style="background:#fff; border-radius:12px; max-width:460px; width:92%; padding:1.5rem; box-shadow:0 8px 32px rgba(22,58,95,0.13); position:relative;">
+        <button id="closePaymentModal" style="position:absolute; top:12px; right:16px; background:none; border:none; font-size:1.5rem; color:#163A5F; cursor:pointer;">&times;</button>
+        <h3 style="color:#163A5F; margin-bottom:0.8rem;">Odeme Bilgileri</h3>
+        <form id="paymentForm">
+          <input id="cardName" type="text" placeholder="Kart Uzerindeki Isim" required style="width:100%;margin-bottom:0.7rem;padding:0.6rem;border-radius:6px;border:1px solid #ccc;">
+          <input id="cardNumber" type="text" placeholder="Kart Numarasi (16 hane)" required maxlength="16" style="width:100%;margin-bottom:0.7rem;padding:0.6rem;border-radius:6px;border:1px solid #ccc;">
+          <div style="display:flex; gap:0.6rem; margin-bottom:0.7rem;">
+            <input id="cardMonth" type="text" placeholder="AA" required maxlength="2" style="width:50%;padding:0.6rem;border-radius:6px;border:1px solid #ccc;">
+            <input id="cardYear" type="text" placeholder="YY" required maxlength="2" style="width:50%;padding:0.6rem;border-radius:6px;border:1px solid #ccc;">
+          </div>
+          <input id="cardCvv" type="password" placeholder="CVV" required maxlength="3" style="width:100%;margin-bottom:0.7rem;padding:0.6rem;border-radius:6px;border:1px solid #ccc;">
+          <div id="paymentTotal" style="font-weight:700; color:#163A5F; margin-bottom:0.9rem;">Toplam: 0 TL</div>
+          <button type="submit" style="width:100%; background:#163A5F; color:#fff; padding:0.7rem 0; border:none; border-radius:6px; font-weight:600; cursor:pointer;">Odemeyi Tamamla</button>
+        </form>
+        <div id="paymentError" style="display:none; color:#b22; margin-top:0.7rem; text-align:center;"></div>
+      </div>
+    </div>
+
+    <!-- Tüm Kitaplar Modalı -->
+    <div class="modal" id="allBooksModal" tabindex="-1" style="display:none; position:fixed; z-index:10006; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); align-items:center; justify-content:center;">
+      <div style="background:#fff; border-radius:12px; max-width:900px; width:94%; padding:2rem; box-shadow:0 8px 32px rgba(22,58,95,0.13); position:relative; max-height:85vh; overflow:auto;">
+        <button id="closeAllBooksModal" style="position:absolute; top:12px; right:16px; background:none; border:none; font-size:1.5rem; color:#163A5F; cursor:pointer;">&times;</button>
+        <h2 style="text-align:center; color:#163A5F; margin-bottom:1.5rem;">Tüm Kitaplar</h2>
+        <div style="max-width:460px; margin:0 auto 1rem auto;">
+          <input id="allBooksSearchInput" type="text" placeholder="Kitap veya yazar ara..." style="width:100%; padding:0.65rem 0.8rem; border:1px solid #cfd7e2; border-radius:8px; font-size:0.95rem;">
+        </div>
+        <div style="display:flex; gap:0.6rem; justify-content:center; flex-wrap:wrap; margin-bottom:1rem;">
+          <select id="allBooksCategoryFilter" style="padding:0.5rem; border:1px solid #cfd7e2; border-radius:8px;">
+            <option value="">Tum Kategoriler</option>
+          </select>
+          <select id="allBooksSortSelect" style="padding:0.5rem; border:1px solid #cfd7e2; border-radius:8px;">
+            <option value="default">Varsayilan Siralama</option>
+            <option value="price_asc">Fiyat (Artan)</option>
+            <option value="price_desc">Fiyat (Azalan)</option>
+            <option value="title_asc">Ada Gore (A-Z)</option>
+          </select>
+        </div>
+        <div id="allBooksEmpty" style="display:none; text-align:center; color:#163A5F; margin-bottom:1rem; font-weight:600;">
+          Kitap bulunamadı.
+        </div>
+        <div class="all-books-grid" id="allBooksGrid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;">
+        </div>
+      </div>
+    </div>
+
+    <!-- Admin Paneli (başlangıçta gizli) -->
+    <div id="adminPanel" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:rgba(0,0,0,0.15); z-index:9998; align-items:center; justify-content:center;">
+      <div style="background:#fff; border-radius:14px; max-width:420px; width:90%; padding:2.2rem 2rem 2rem 2rem; box-shadow:0 8px 32px rgba(22,58,95,0.13); position:relative;">
+        <button id="closeAdminPanel" style="position:absolute; top:12px; right:16px; background:none; border:none; font-size:1.5rem; color:#163A5F; cursor:pointer;">&times;</button>
+        <h2 style="text-align:center; color:#163A5F; margin-bottom:1.2rem;">Admin Paneli</h2>
+        <div style="display:flex; gap:1rem; justify-content:center; margin-bottom:1.5rem; flex-wrap:wrap;">
+          <button id="openAddBookModal" style="padding:0.7rem 1.2rem; border-radius:6px; border:1px solid #163A5F; background:#163A5F; color:#fff; font-weight:500; cursor:pointer;">Kitap Ekle</button>
+          <button id="openSearchBookModal" style="padding:0.7rem 1.2rem; border-radius:6px; border:1px solid #163A5F; background:#163A5F; color:#fff; font-weight:500; cursor:pointer;">Kitap Ara</button>
+          <button id="openAddMemberModal" style="padding:0.7rem 1.2rem; border-radius:6px; border:1px solid #163A5F; background:#163A5F; color:#fff; font-weight:500; cursor:pointer;">Üye Ekle</button>
+        </div>
+        <div id="adminStats" style="background:#f7f9fa; border-radius:10px; padding:0.8rem; color:#163A5F; font-size:0.95rem;">
+          <div><strong>Toplam Kitap:</strong> <span id="statTotalBooks">0</span></div>
+          <div><strong>Stokta Olan:</strong> <span id="statInStockBooks">0</span></div>
+          <div><strong>Favoriler:</strong> <span id="statFavoriteCount">0</span></div>
+          <div><strong>Yorum Sayisi:</strong> <span id="statReviewCount">0</span></div>
+          <div><strong>Odunc Islemi:</strong> <span id="statBorrowCount">0</span></div>
+          <div><strong>Etkinlik Kaydi:</strong> <span id="statEventJoinCount">0</span></div>
+        </div>
+        <!-- Modallar -->
+        <!-- Kitap Ekle Modalı -->
+        <div class="modal" id="addBookModal" tabindex="-1" style="display:none; position:fixed; z-index:10000; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); align-items:center; justify-content:center;">
+          <div style="background:#fff; border-radius:12px; max-width:350px; width:90%; padding:2rem; box-shadow:0 8px 32px rgba(22,58,95,0.13); position:relative;">
+            <button class="closeModal" data-modal="addBookModal" style="position:absolute; top:12px; right:16px; background:none; border:none; font-size:1.5rem; color:#163A5F; cursor:pointer;">&times;</button>
+            <h3 style="text-align:center; color:#163A5F; margin-bottom:1.2rem;">Kitap Ekle</h3>
+            <form id="addBookForm">
+              <input type="text" placeholder="Kitap Adı" required style="width:100%;margin-bottom:0.7rem;padding:0.6rem;border-radius:6px;border:1px solid #ccc;">
+              <input type="text" placeholder="Yazar" required style="width:100%;margin-bottom:0.7rem;padding:0.6rem;border-radius:6px;border:1px solid #ccc;">
+              <input type="text" placeholder="Yayınevi" style="width:100%;margin-bottom:0.7rem;padding:0.6rem;border-radius:6px;border:1px solid #ccc;">
+              <input type="number" placeholder="Basım Yılı" style="width:100%;margin-bottom:0.7rem;padding:0.6rem;border-radius:6px;border:1px solid #ccc;">
+              <input type="text" placeholder="ISBN" style="width:100%;margin-bottom:0.7rem;padding:0.6rem;border-radius:6px;border:1px solid #ccc;">
+              <select required style="width:100%;margin-bottom:1.2rem;padding:0.6rem;border-radius:6px;border:1px solid #ccc;">
+                <option value="">Durum Seçin</option>
+                <option value="Rafta">Rafta</option>
+                <option value="Stokta Yok">Stokta Yok</option>
+              </select>
+              <button type="submit" style="width:100%;background:#163A5F;color:#fff;padding:0.7rem 0;border:none;border-radius:6px;font-weight:600;cursor:pointer;">Ekle</button>
+            </form>
+          </div>
+        </div>
+        <!-- Kitap Ara Modalı -->
+        <div class="modal" id="searchBookModal" tabindex="-1" style="display:none; position:fixed; z-index:10000; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); align-items:center; justify-content:center;">
+          <div style="background:#fff; border-radius:12px; max-width:350px; width:90%; padding:2rem; box-shadow:0 8px 32px rgba(22,58,95,0.13); position:relative;">
+            <button class="closeModal" data-modal="searchBookModal" style="position:absolute; top:12px; right:16px; background:none; border:none; font-size:1.5rem; color:#163A5F; cursor:pointer;">&times;</button>
+            <h3 style="text-align:center; color:#163A5F; margin-bottom:1.2rem;">Kitap Ara</h3>
+            <form id="searchBookForm">
+              <input type="text" id="searchBookName" placeholder="Kitap Adı" required style="width:100%;margin-bottom:1.2rem;padding:0.6rem;border-radius:6px;border:1px solid #ccc;">
+              <button type="submit" style="width:100%;background:#163A5F;color:#fff;padding:0.7rem 0;border:none;border-radius:6px;font-weight:600;cursor:pointer;">Ara</button>
+            </form>
+            <div id="searchBookResult" style="margin-top:1rem; display:none; background:#f7f9fa; border-radius:8px; padding:0.8rem; color:#163A5F;"></div>
+          </div>
+        </div>
+        <!-- Üye Ekle Modalı -->
+        <div class="modal" id="addMemberModal" tabindex="-1" style="display:none; position:fixed; z-index:10000; left:0; top:0; width:100vw; height:100vh; background:rgba(0,0,0,0.4); align-items:center; justify-content:center;">
+          <div style="background:#fff; border-radius:12px; max-width:350px; width:90%; padding:2rem; box-shadow:0 8px 32px rgba(22,58,95,0.13); position:relative;">
+            <button class="closeModal" data-modal="addMemberModal" style="position:absolute; top:12px; right:16px; background:none; border:none; font-size:1.5rem; color:#163A5F; cursor:pointer;">&times;</button>
+            <h3 style="text-align:center; color:#163A5F; margin-bottom:1.2rem;">Üye Ekle</h3>
+            <form id="addMemberForm">
+              <input type="text" placeholder="Ad" required style="width:100%;margin-bottom:0.7rem;padding:0.6rem;border-radius:6px;border:1px solid #ccc;">
+              <input type="text" placeholder="Soyad" required style="width:100%;margin-bottom:0.7rem;padding:0.6rem;border-radius:6px;border:1px solid #ccc;">
+              <input type="text" placeholder="T.C. Kimlik No" required style="width:100%;margin-bottom:0.7rem;padding:0.6rem;border-radius:6px;border:1px solid #ccc;">
+              <input type="email" placeholder="E-posta" style="width:100%;margin-bottom:0.7rem;padding:0.6rem;border-radius:6px;border:1px solid #ccc;">
+              <input type="tel" placeholder="Telefon" style="width:100%;margin-bottom:0.7rem;padding:0.6rem;border-radius:6px;border:1px solid #ccc;">
+              <input type="text" placeholder="Adres" style="width:100%;margin-bottom:1.2rem;padding:0.6rem;border-radius:6px;border:1px solid #ccc;">
+              <button type="submit" style="width:100%;background:#163A5F;color:#fff;padding:0.7rem 0;border:none;border-radius:6px;font-weight:600;cursor:pointer;">Ekle</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="toastMessage" style="display:none; position:fixed; right:20px; bottom:20px; background:#163A5F; color:#fff; padding:0.7rem 1rem; border-radius:8px; z-index:10020;"></div>
+    <script>
+      // Tema yardımcıları: gece/gündüz modunu uygular ve saklar.
+      function applyTheme(themeName) {
+        var isDark = themeName === 'dark';
+        document.body.classList.toggle('dark-mode', isDark);
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        var toggleBtn = document.getElementById('themeToggleBtn');
+        if(toggleBtn) toggleBtn.textContent = isDark ? '☀️ Gunduz' : '🌙 Gece';
+      }
+      function initTheme() {
+        var savedTheme = localStorage.getItem('theme');
+        applyTheme(savedTheme === 'dark' ? 'dark' : 'light');
+      }
+      function toggleTheme() {
+        applyTheme(document.body.classList.contains('dark-mode') ? 'light' : 'dark');
+      }
+
+      // Sistemde başlangıçta tanımlı kullanıcılar.
+      var users = [
+        { username: 'admin', password: '1234', role: 'admin' }
+      ];
+      // Sepet adedi ve sepet ürünlerini tutar.
+      var sepetAdedi = 0;
+      var sepetUrunleri = [];
+      var favoriKitaplar = JSON.parse(localStorage.getItem('favorites') || '[]');
+      var kitapYorumlari = JSON.parse(localStorage.getItem('bookReviews') || '{}');
+      var oduncGecmisi = JSON.parse(localStorage.getItem('borrowHistory') || '[]');
+      var etkinlikKayitlari = JSON.parse(localStorage.getItem('eventJoins') || '[]');
+      var seciliDetayKitabi = '';
+      // Sayfada gösterilecek tüm kitapların ana veri kaynağı.
+      var katalogKitaplar = [
+        { ad: 'Aşk-ı Memnu', yazar: 'Halit Ziya Uşaklıgil', fiyat: 210, bolum: 'recommended', durum: 'Rafta', kategori: 'Roman', stok: 6, imageUrl: 'https://covers.openlibrary.org/b/id/10849165-L.jpg' },
+        { ad: 'Kürk Mantolu Madonna', yazar: 'Sabahattin Ali', fiyat: 180, bolum: 'recommended', durum: 'Rafta', kategori: 'Roman', stok: 8, imageUrl: 'https://covers.openlibrary.org/b/id/10848013-L.jpg' },
+        { ad: 'Tutunamayanlar', yazar: 'Oğuz Atay', fiyat: 260, bolum: 'recommended', durum: 'Stokta Yok', kategori: 'Klasik', stok: 0, imageUrl: 'https://covers.openlibrary.org/b/id/14857564-L.jpg' },
+        { ad: 'Saatleri Ayarlama Enstitüsü', yazar: 'Ahmet Hamdi Tanpınar', fiyat: 220, bolum: 'recommended', durum: 'Rafta', kategori: 'Klasik', stok: 4, imageUrl: 'https://covers.openlibrary.org/b/id/12354821-L.jpg' },
+        { ad: 'İnce Memed', yazar: 'Yaşar Kemal', fiyat: 195, bolum: 'recommended', durum: 'Rafta', kategori: 'Edebiyat', stok: 7, imageUrl: 'https://covers.openlibrary.org/b/id/6627985-L.jpg' },
+        { ad: 'Çalıkuşu', yazar: 'Reşat Nuri Güntekin', fiyat: 170, bolum: 'recommended', durum: 'Rafta', kategori: 'Roman', stok: 5, imageUrl: 'https://covers.openlibrary.org/b/id/10441700-L.jpg' },
+        { ad: 'Yaban', yazar: 'Yakup Kadri Karaosmanoğlu', fiyat: 165, bolum: 'recommended', durum: 'Rafta', kategori: 'Roman', stok: 3, imageUrl: 'https://covers.openlibrary.org/b/id/6954272-L.jpg' },
+        { ad: 'Sefiller', yazar: 'Victor Hugo', fiyat: 240, bolum: 'bestseller', durum: 'Rafta', kategori: 'Klasik', stok: 9, imageUrl: 'https://covers.openlibrary.org/b/id/12112352-L.jpg' },
+        { ad: 'Suç ve Ceza', yazar: 'Fyodor Dostoyevski', fiyat: 230, bolum: 'bestseller', durum: 'Rafta', kategori: 'Klasik', stok: 5, imageUrl: 'https://covers.openlibrary.org/b/id/10736127-L.jpg' },
+        { ad: '1984', yazar: 'George Orwell', fiyat: 205, bolum: 'bestseller', durum: 'Rafta', kategori: 'Bilim Kurgu', stok: 6, imageUrl: 'https://covers.openlibrary.org/b/id/14351142-L.jpg' },
+        { ad: 'Fahrenheit 451', yazar: 'Ray Bradbury', fiyat: 215, bolum: 'bestseller', durum: 'Rafta', kategori: 'Bilim Kurgu', stok: 4, imageUrl: 'https://covers.openlibrary.org/b/id/12993656-L.jpg' },
+        { ad: 'Simyacı', yazar: 'Paulo Coelho', fiyat: 200, bolum: 'bestseller', durum: 'Rafta', kategori: 'Roman', stok: 10, imageUrl: 'https://covers.openlibrary.org/b/id/12296155-L.jpg' }
+      ];
+
+      function kitapKartiOlustur(kitap, onerilenMi) {
+        var kart = document.createElement('div');
+        kart.className = onerilenMi ? 'recommended-card' : 'book-card';
+        kart.setAttribute('data-book-title', kitap.ad);
+        kart.setAttribute('data-book-category', kitap.kategori || '');
+        kart.innerHTML =
+          '<img src="' + kitap.imageUrl + '" alt="' + kitap.ad + '">' +
+          '<div class="' + (onerilenMi ? 'recommended-title' : 'book-title') + '">' + kitap.ad + '</div>' +
+          '<div class="' + (onerilenMi ? 'recommended-author' : 'book-author') + '">' + kitap.yazar + '</div>' +
+          '<div class="book-price">' + kitap.fiyat.toFixed(2) + ' TL</div>' +
+          '<div class="book-stock" style="font-size:0.82rem; color:#4a5a6a;">Stok: ' + (kitap.stok || 0) + '</div>';
+        return kart;
+      }
+
+      function showToast(message) {
+        var toast = document.getElementById('toastMessage');
+        toast.textContent = message;
+        toast.style.display = 'block';
+        clearTimeout(showToast._timer);
+        showToast._timer = setTimeout(function() {
+          toast.style.display = 'none';
+        }, 1800);
+      }
+
+      function saveState() {
+        localStorage.setItem('favorites', JSON.stringify(favoriKitaplar));
+        localStorage.setItem('bookReviews', JSON.stringify(kitapYorumlari));
+        localStorage.setItem('borrowHistory', JSON.stringify(oduncGecmisi));
+        localStorage.setItem('eventJoins', JSON.stringify(etkinlikKayitlari));
+      }
+
+      function adminIstatistikleriniGuncelle() {
+        var toplamYorum = Object.values(kitapYorumlari).reduce(function(toplam, list) {
+          return toplam + list.length;
+        }, 0);
+        document.getElementById('statTotalBooks').textContent = String(katalogKitaplar.length);
+        document.getElementById('statInStockBooks').textContent = String(katalogKitaplar.filter(function(k){ return (k.stok || 0) > 0; }).length);
+        document.getElementById('statFavoriteCount').textContent = String(favoriKitaplar.length);
+        document.getElementById('statReviewCount').textContent = String(toplamYorum);
+        document.getElementById('statBorrowCount').textContent = String(oduncGecmisi.length);
+        document.getElementById('statEventJoinCount').textContent = String(etkinlikKayitlari.length);
+      }
+
+      function detayFavoriButonunuGuncelle() {
+        var btn = document.getElementById('bookFavoriteBtn');
+        var favoride = favoriKitaplar.indexOf(seciliDetayKitabi) !== -1;
+        btn.textContent = favoride ? 'Favoriden Cikar' : 'Favorilere Ekle';
+      }
+
+      function renderBookReviews(bookTitle) {
+        var list = kitapYorumlari[bookTitle] || [];
+        var container = document.getElementById('bookReviewList');
+        if(!list.length) {
+          container.innerHTML = '<div style="font-size:0.9rem; color:#4a5a6a;">Henuz yorum yok.</div>';
+          return;
+        }
+        container.innerHTML = list.map(function(item){
+          return '<div style="border:1px solid #dbe4ef; border-radius:8px; padding:0.45rem; margin-bottom:0.35rem;">' +
+            '<div style="font-weight:700; color:#163A5F;">' + item.rating + '/5</div>' +
+            '<div style="font-size:0.9rem; color:#163A5F;">' + item.text + '</div>' +
+            '</div>';
+        }).join('');
+      }
+
+      function kataloguRenderEt() {
+        var carousel = document.getElementById('bookCarousel');
+        var recommendedGrid = document.getElementById('recommendedGrid');
+        carousel.innerHTML = '';
+        recommendedGrid.innerHTML = '';
+        document.getElementById('allBooksGrid').innerHTML = '';
+
+        katalogKitaplar.forEach(function(kitap) {
+          if(kitap.bolum === 'bestseller') {
+            carousel.appendChild(kitapKartiOlustur(kitap, false));
+          } else {
+            recommendedGrid.appendChild(kitapKartiOlustur(kitap, true));
+          }
+        });
+      }
+      // Türkçe karakterleri sadeleştirip arama için karşılaştırılabilir metin üretir.
+      function normalizeSearchText(metin) {
+        return String(metin || '')
+          .toLocaleLowerCase('tr-TR')
+          .replace(/ı/g, 'i')
+          .replace(/ğ/g, 'g')
+          .replace(/ü/g, 'u')
+          .replace(/ş/g, 's')
+          .replace(/ö/g, 'o')
+          .replace(/ç/g, 'c')
+          .trim();
+      }
+      // Tüm kitaplar modalındaki listeyi (arama dahil) oluşturur.
+      function tumKitaplariRenderEt(aramaMetni) {
+        var allBooksGrid = document.getElementById('allBooksGrid');
+        var allBooksEmpty = document.getElementById('allBooksEmpty');
+        var categoryValue = document.getElementById('allBooksCategoryFilter').value;
+        var sortValue = document.getElementById('allBooksSortSelect').value;
+        var query = normalizeSearchText(aramaMetni);
+        allBooksGrid.innerHTML = '';
+
+        var filtrelenmis = katalogKitaplar.filter(function(kitap) {
+          if(!query) return true;
+          var ad = normalizeSearchText(kitap.ad);
+          var yazar = normalizeSearchText(kitap.yazar);
+          return ad.includes(query) || yazar.includes(query);
+        }).filter(function(kitap){
+          return !categoryValue || kitap.kategori === categoryValue;
+        });
+
+        if(sortValue === 'price_asc') {
+          filtrelenmis.sort(function(a, b){ return a.fiyat - b.fiyat; });
+        } else if(sortValue === 'price_desc') {
+          filtrelenmis.sort(function(a, b){ return b.fiyat - a.fiyat; });
+        } else if(sortValue === 'title_asc') {
+          filtrelenmis.sort(function(a, b){ return a.ad.localeCompare(b.ad, 'tr'); });
+        }
+
+        if(!filtrelenmis.length) {
+          allBooksEmpty.style.display = 'block';
+          return;
+        }
+
+        allBooksEmpty.style.display = 'none';
+        filtrelenmis.forEach(function(kitap) {
+          var onerilenMi = kitap.bolum === 'recommended';
+          var kart = kitapKartiOlustur(kitap, onerilenMi);
+          allBooksGrid.appendChild(kart);
+        });
+        kitapKartlariniTurkcelestir();
+      }
+
+      function kategorileriDoldur() {
+        var categorySelect = document.getElementById('allBooksCategoryFilter');
+        var kategoriler = Array.from(new Set(katalogKitaplar.map(function(k){ return k.kategori; })));
+        kategoriler.forEach(function(kategori){
+          var option = document.createElement('option');
+          option.value = kategori;
+          option.textContent = kategori;
+          categorySelect.appendChild(option);
+        });
+      }
+
+      // Fiyat metnini sayıya çevirir (TL formatını temizler).
+      function fiyatiSayiyaCevir(fiyatMetni) {
+        var sayi = parseFloat(String(fiyatMetni).replace('TL', '').replace(',', '.').trim());
+        return isNaN(sayi) ? 0 : sayi;
+      }
+      // Sepet rozetindeki ürün adedini günceller.
+      function sepetiGuncelleGosterge() {
+        document.getElementById('cartCount').textContent = String(sepetAdedi);
+      }
+      // Sepet modalındaki ürün listesini ve toplamı çizer.
+      function sepetiRenderEt() {
+        var cartList = document.getElementById('cartList');
+        var cartTotal = document.getElementById('cartTotal');
+        var checkoutBtn = document.getElementById('checkoutBtn');
+        if(!sepetUrunleri.length) {
+          cartList.innerHTML = '<div style="padding:0.6rem; background:#f7f9fa; border-radius:8px; color:#163A5F;">Sepetiniz bos.</div>';
+          cartTotal.textContent = 'Toplam: 0 TL';
+          checkoutBtn.disabled = true;
+          checkoutBtn.style.opacity = '0.6';
+          checkoutBtn.style.cursor = 'not-allowed';
+          return;
+        }
+
+        var toplam = 0;
+        cartList.innerHTML = sepetUrunleri.map(function(urun, index){
+          toplam += urun.fiyat;
+          return '<div style="padding:0.7rem; border:1px solid #e5e8ec; border-radius:8px; margin-bottom:0.5rem;">' +
+            '<div style="font-weight:700; color:#163A5F;">' + urun.ad + '</div>' +
+            '<div style="font-size:0.92rem; color:#4c5b6b;">Yazar: ' + urun.yazar + '</div>' +
+            '<div style="font-size:0.92rem; color:#4c5b6b;">Fiyat: ' + urun.fiyat.toFixed(2) + ' TL</div>' +
+            '<button type="button" class="remove-cart-item-btn" data-index="' + index + '" style="margin-top:0.4rem; padding:0.35rem 0.55rem; border:1px solid #b22; color:#b22; background:#fff; border-radius:5px; cursor:pointer;">Sepetten Cikar</button>' +
+          '</div>';
+        }).join('');
+        cartTotal.textContent = 'Toplam: ' + toplam.toFixed(2) + ' TL';
+        checkoutBtn.disabled = false;
+        checkoutBtn.style.opacity = '1';
+        checkoutBtn.style.cursor = 'pointer';
+      }
+      // Sepetin güncel toplam tutarını hesaplar.
+      function sepetToplamiHesapla() {
+        return sepetUrunleri.reduce(function(toplam, urun){
+          return toplam + urun.fiyat;
+        }, 0);
+      }
+
+      // Giriş ikonuna basıldığında giriş modalını açar.
+      document.getElementById('loginBtn').onclick = function() {
+        document.getElementById('adminLoginModal').style.display = 'flex';
+      };
+      // "Kitaplar" menüsünde tüm kitaplar modalını açar.
+      document.getElementById('allBooksBtn').onclick = function(e) {
+        e.preventDefault();
+        var searchInput = document.getElementById('allBooksSearchInput');
+        searchInput.value = '';
+        document.getElementById('allBooksCategoryFilter').value = '';
+        document.getElementById('allBooksSortSelect').value = 'default';
+        tumKitaplariRenderEt('');
+        document.getElementById('allBooksModal').style.display = 'flex';
+      };
+      // Tüm kitaplar listesini yazdıkça filtreler.
+      document.getElementById('allBooksSearchInput').addEventListener('input', function(e) {
+        tumKitaplariRenderEt(e.target.value);
+      });
+      document.getElementById('allBooksCategoryFilter').addEventListener('change', function() {
+        tumKitaplariRenderEt(document.getElementById('allBooksSearchInput').value);
+      });
+      document.getElementById('allBooksSortSelect').addEventListener('change', function() {
+        tumKitaplariRenderEt(document.getElementById('allBooksSearchInput').value);
+      });
+      // Hakkımızda modalını açar.
+      document.getElementById('aboutBtn').onclick = function(e) {
+        e.preventDefault();
+        document.getElementById('aboutModal').style.display = 'flex';
+      };
+      // Etkinlikler modalını açar.
+      document.getElementById('eventsBtn').onclick = function(e) {
+        e.preventDefault();
+        document.getElementById('eventsModal').style.display = 'flex';
+      };
+      // Hikaye modalını açar.
+      document.getElementById('readStoryBtn').onclick = function() {
+        document.getElementById('storyModal').style.display = 'flex';
+      };
+      // Sepet ikonuna basılınca sepeti gösterir.
+      document.getElementById('cartBtn').onclick = function() {
+        sepetiRenderEt();
+        document.getElementById('cartModal').style.display = 'flex';
+      };
+      // Ödeme adımına geçişi yapar.
+      document.getElementById('checkoutBtn').onclick = function() {
+        if(!sepetUrunleri.length) return;
+        document.getElementById('cartModal').style.display = 'none';
+        document.getElementById('paymentTotal').textContent = 'Toplam: ' + sepetToplamiHesapla().toFixed(2) + ' TL';
+        document.getElementById('paymentError').style.display = 'none';
+        document.getElementById('paymentModal').style.display = 'flex';
+      };
+      // Giriş modalını kapatır.
+      document.getElementById('closeAdminLoginModal').onclick = function() {
+        document.getElementById('adminLoginModal').style.display = 'none';
+      };
+      // Modal dışına tıklanınca giriş modalını kapatır.
+      document.getElementById('adminLoginModal').onclick = function(e) {
+        if(e.target === this) this.style.display = 'none';
+      };
+      // Kayıt modalını açar ve durum mesajlarını sıfırlar.
+      document.getElementById('openRegisterModal').onclick = function() {
+        document.getElementById('adminLoginModal').style.display = 'none';
+        document.getElementById('registerModal').style.display = 'flex';
+        document.getElementById('registerError').style.display = 'none';
+        document.getElementById('registerSuccess').style.display = 'none';
+      };
+      // Kayıt modalını kapatır.
+      document.getElementById('closeRegisterModal').onclick = function() {
+        document.getElementById('registerModal').style.display = 'none';
+      };
+      // Modal dışına tıklanınca kayıt modalını kapatır.
+      document.getElementById('registerModal').onclick = function(e) {
+        if(e.target === this) this.style.display = 'none';
+      };
+      // Kayıt formu doğrulaması ve kullanıcı ekleme işlemi.
+      document.getElementById('registerForm').onsubmit = function(e) {
+        e.preventDefault();
+        var username = document.getElementById('registerUsername').value.trim();
+        var password = document.getElementById('registerPassword').value;
+        var passwordConfirm = document.getElementById('registerPasswordConfirm').value;
+        var registerError = document.getElementById('registerError');
+        var registerSuccess = document.getElementById('registerSuccess');
+
+        registerError.style.display = 'none';
+        registerSuccess.style.display = 'none';
+
+        if(password !== passwordConfirm) {
+          registerError.textContent = 'Şifreler eşleşmiyor.';
+          registerError.style.display = 'block';
+          return;
+        }
+        if(username.length < 3) {
+          registerError.textContent = 'Kullanıcı adı en az 3 karakter olmalı.';
+          registerError.style.display = 'block';
+          return;
+        }
+        if(users.some(function(u){ return u.username.toLowerCase() === username.toLowerCase(); })) {
+          registerError.textContent = 'Bu kullanıcı adı zaten kullanılıyor.';
+          registerError.style.display = 'block';
+          return;
+        }
+
+        users.push({ username: username, password: password, role: 'user' });
+        registerSuccess.style.display = 'block';
+        this.reset();
+
+        setTimeout(function() {
+          document.getElementById('registerModal').style.display = 'none';
+          document.getElementById('adminLoginModal').style.display = 'flex';
+        }, 800);
+      };
+      // Giriş formunda kullanıcı bilgilerini kontrol eder.
+      document.getElementById('adminLoginForm').onsubmit = function(e) {
+        e.preventDefault();
+        var u = document.getElementById('adminUsername').value;
+        var p = document.getElementById('adminPassword').value;
+        var foundUser = users.find(function(user){
+          return user.username === u && user.password === p;
+        });
+        if(foundUser) {
+          document.getElementById('adminLoginModal').style.display = 'none';
+          document.getElementById('adminLoginError').style.display = 'none';
+          document.getElementById('adminLoginForm').reset();
+          document.getElementById('loginText').textContent = foundUser.username;
+          if(foundUser.role === 'admin') {
+            document.getElementById('adminPanel').style.display = 'flex';
+            if(document.getElementById('adminActions')) document.getElementById('adminActions').style.display = 'block';
+          } else {
+            document.getElementById('adminPanel').style.display = 'none';
+          }
+        } else {
+          document.getElementById('adminLoginError').style.display = 'block';
+        }
+      };
+      // Admin panelini kapatır.
+      document.getElementById('closeAdminPanel').onclick = function() {
+        document.getElementById('adminPanel').style.display = 'none';
+      };
+      // Panel dışı tıklamada admin panelini kapatır.
+      document.getElementById('adminPanel').onclick = function(e) {
+        if(e.target === this) this.style.display = 'none';
+      };
+      // Tüm kitaplar modalını kapatır.
+      document.getElementById('closeAllBooksModal').onclick = function() {
+        document.getElementById('allBooksModal').style.display = 'none';
+      };
+      // Kitap detay modalını kapatır.
+      document.getElementById('closeBookDetailModal').onclick = function() {
+        document.getElementById('bookDetailModal').style.display = 'none';
+      };
+      // Sepet modalını kapatır.
+      document.getElementById('closeCartModal').onclick = function() {
+        document.getElementById('cartModal').style.display = 'none';
+      };
+      // Hikaye modalını kapatır.
+      document.getElementById('closeStoryModal').onclick = function() {
+        document.getElementById('storyModal').style.display = 'none';
+      };
+      // Hakkımızda modalını kapatır.
+      document.getElementById('closeAboutModal').onclick = function() {
+        document.getElementById('aboutModal').style.display = 'none';
+      };
+      // Etkinlikler modalını kapatır.
+      document.getElementById('closeEventsModal').onclick = function() {
+        document.getElementById('eventsModal').style.display = 'none';
+      };
+      // Ödeme modalını kapatır.
+      document.getElementById('closePaymentModal').onclick = function() {
+        document.getElementById('paymentModal').style.display = 'none';
+      };
+      // Ödeme formu doğrulama ve sipariş tamamlama işlemi.
+      document.getElementById('paymentForm').onsubmit = function(e) {
+        e.preventDefault();
+        var name = document.getElementById('cardName').value.trim();
+        var number = document.getElementById('cardNumber').value.trim();
+        var month = document.getElementById('cardMonth').value.trim();
+        var year = document.getElementById('cardYear').value.trim();
+        var cvv = document.getElementById('cardCvv').value.trim();
+        var paymentError = document.getElementById('paymentError');
+
+        paymentError.style.display = 'none';
+        if(!name || !/^\d{16}$/.test(number) || !/^\d{2}$/.test(month) || !/^\d{2}$/.test(year) || !/^\d{3}$/.test(cvv)) {
+          paymentError.textContent = 'Lutfen odeme bilgilerini eksiksiz ve dogru formatta girin.';
+          paymentError.style.display = 'block';
+          return;
+        }
+
+        alert('Odeme basarili! Siparisiniz alindi.');
+        oduncGecmisi.push({ date: new Date().toISOString(), item_count: sepetUrunleri.length });
+        sepetUrunleri = [];
+        sepetAdedi = 0;
+        sepetiGuncelleGosterge();
+        sepetiRenderEt();
+        document.getElementById('paymentModal').style.display = 'none';
+        document.getElementById('paymentForm').reset();
+        saveState();
+        adminIstatistikleriniGuncelle();
+      };
+      // Admin alt modallarını açar.
+      ['openAddBookModal','openSearchBookModal','openAddMemberModal'].forEach(function(id){
+        var btn = document.getElementById(id);
+        if(btn) btn.onclick = function(){
+          var modalId = id.replace('open','').replace('Modal','Modal');
+          document.getElementById(modalId.charAt(0).toLowerCase()+modalId.slice(1)).style.display = 'flex';
+        };
+      });
+      // Çarpı butonuna göre ilgili modalı kapatır.
+      document.querySelectorAll('.closeModal').forEach(function(btn){
+        btn.onclick = function(){
+          var modal = btn.getAttribute('data-modal');
+          document.getElementById(modal).style.display = 'none';
+        };
+      });
+      // Genel modal dışına tıklayınca kapatma davranışı.
+      document.querySelectorAll('.modal').forEach(function(modal){
+        modal.onclick = function(e){
+          if(e.target === this) this.style.display = 'none';
+        };
+      });
+      // Kitap kartlarını görsel olarak düzenler ve buton ekler.
+      function kitapKartlariniTurkcelestir() {
+        var kartlar = document.querySelectorAll('.book-card, .recommended-card');
+        var kategoriListesi = ['Roman', 'Klasik', 'Bilim Kurgu', 'Macera', 'Edebiyat', 'Psikoloji', 'Tarih'];
+        var aciklamaListesi = [
+          'Akici anlatimi ile one cikan bir eser.',
+          'Okurlarin en cok begendigi kitaplardan biri.',
+          'Derin karakterleriyle unutulmaz bir hikaye sunar.',
+          'Sizi ilk sayfadan itibaren icine ceker.',
+          'Kutuphane koleksiyonunda mutlaka bulunmali.',
+          'Duygusal ve dusundurucu bir okuma deneyimi sunar.',
+          'Her okumada yeni bir ayrinti kesfetmenizi saglar.'
+        ];
+        kartlar.forEach(function(kart){
+          kart.style.border = '1px solid #e5e8ec';
+          kart.style.borderRadius = '10px';
+          kart.style.padding = '0.7rem';
+          kart.style.background = '#fff';
+          kart.style.display = 'flex';
+          kart.style.flexDirection = 'column';
+          kart.style.height = '100%';
+
+          if(!kart.querySelector('.book-meta-badge')) {
+            var mevcutKategori = kart.getAttribute('data-book-category');
+            var rastgeleKategori = mevcutKategori || kategoriListesi[Math.floor(Math.random() * kategoriListesi.length)];
+            var badge = document.createElement('div');
+            badge.className = 'book-meta-badge';
+            badge.textContent = rastgeleKategori;
+            badge.style.display = 'inline-block';
+            badge.style.margin = '0.35rem 0 0.4rem 0';
+            badge.style.padding = '0.2rem 0.55rem';
+            badge.style.borderRadius = '999px';
+            badge.style.fontSize = '0.72rem';
+            badge.style.fontWeight = '700';
+            badge.style.background = '#eef4fb';
+            badge.style.color = '#163A5F';
+            kart.insertBefore(badge, kart.querySelector('.book-title, .recommended-title'));
+          }
+
+          if(!kart.querySelector('.book-short-desc')) {
+            var rastgeleAciklama = aciklamaListesi[Math.floor(Math.random() * aciklamaListesi.length)];
+            var desc = document.createElement('div');
+            desc.className = 'book-short-desc';
+            desc.textContent = rastgeleAciklama;
+            desc.style.fontSize = '0.82rem';
+            desc.style.color = '#5a6470';
+            desc.style.marginTop = '0.3rem';
+            kart.appendChild(desc);
+          }
+
+          if(!kart.querySelector('.book-actions')) {
+            var fiyatEl = kart.querySelector('.book-price');
+            var fiyatMetni = fiyatEl ? fiyatEl.textContent.replace('$', '') + ' TL' : 'Fiyat bilgisi yok';
+            if(fiyatEl) fiyatEl.textContent = fiyatMetni;
+
+            var actions = document.createElement('div');
+            actions.className = 'book-actions';
+            actions.style.marginTop = 'auto';
+            actions.style.display = 'flex';
+            actions.style.flexDirection = 'column';
+            actions.style.gap = '0.4rem';
+            actions.innerHTML =
+              '<button type="button" class="book-detail-btn" style="padding:0.4rem 0.7rem;border:1px solid #163A5F;background:#fff;color:#163A5F;border-radius:5px;cursor:pointer;">Detayi Gor</button>' +
+              '<button type="button" class="book-cart-btn" style="padding:0.4rem 0.7rem;border:1px solid #163A5F;background:#163A5F;color:#fff;border-radius:5px;cursor:pointer;">Sepete Ekle</button>';
+            kart.appendChild(actions);
+          }
+        });
+      }
+      // Kartlardaki detay/sepet butonlarını ve sepetten silmeyi yönetir.
+      document.addEventListener('click', function(e){
+        if(e.target.classList.contains('book-detail-btn')) {
+          var card = e.target.closest('.book-card, .recommended-card');
+          var baslik = card.querySelector('.book-title, .recommended-title');
+          var yazar = card.querySelector('.book-author, .recommended-author');
+          var fiyat = card.querySelector('.book-price');
+          seciliDetayKitabi = baslik ? baslik.textContent : '';
+          document.getElementById('bookDetailTitle').textContent = baslik ? baslik.textContent : 'Kitap Detayi';
+          document.getElementById('bookDetailAuthor').textContent = yazar ? 'Yazar: ' + yazar.textContent : '';
+          document.getElementById('bookDetailPrice').textContent = fiyat ? 'Fiyat: ' + fiyat.textContent : '';
+          document.getElementById('bookDetailText').textContent = 'Bu kitap, okurlarin en cok tercih ettigi eserler arasindadir. Hemen sepete ekleyerek satin alabilirsiniz.';
+          detayFavoriButonunuGuncelle();
+          renderBookReviews(seciliDetayKitabi);
+          document.getElementById('bookDetailModal').style.display = 'flex';
+        }
+        if(e.target.classList.contains('book-cart-btn')) {
+          var selectedCard = e.target.closest('.book-card, .recommended-card');
+          var seciliBaslik = selectedCard.querySelector('.book-title, .recommended-title');
+          var seciliYazar = selectedCard.querySelector('.book-author, .recommended-author');
+          var seciliFiyat = selectedCard.querySelector('.book-price');
+          var fiyatText = seciliFiyat ? seciliFiyat.textContent : '0 TL';
+          var fiyatSayi = fiyatiSayiyaCevir(fiyatText);
+
+          sepetUrunleri.push({
+            ad: seciliBaslik ? seciliBaslik.textContent : 'Adsiz Kitap',
+            yazar: seciliYazar ? seciliYazar.textContent : '-',
+            fiyat: fiyatSayi
+          });
+          sepetAdedi = sepetUrunleri.length;
+          sepetiGuncelleGosterge();
+          sepetiRenderEt();
+          showToast('Kitap sepete eklendi');
+        }
+        if(e.target.classList.contains('remove-cart-item-btn')) {
+          var index = parseInt(e.target.getAttribute('data-index'), 10);
+          if(!isNaN(index)) {
+            sepetUrunleri.splice(index, 1);
+            sepetAdedi = sepetUrunleri.length;
+            sepetiGuncelleGosterge();
+            sepetiRenderEt();
+          }
+        }
+      });
+      document.getElementById('bookFavoriteBtn').onclick = function() {
+        if(!seciliDetayKitabi) return;
+        var idx = favoriKitaplar.indexOf(seciliDetayKitabi);
+        if(idx === -1) {
+          favoriKitaplar.push(seciliDetayKitabi);
+          showToast('Favorilere eklendi');
+        } else {
+          favoriKitaplar.splice(idx, 1);
+          showToast('Favorilerden cikarildi');
+        }
+        detayFavoriButonunuGuncelle();
+        saveState();
+        adminIstatistikleriniGuncelle();
+      };
+      document.getElementById('bookReviewForm').onsubmit = function(e) {
+        e.preventDefault();
+        if(!seciliDetayKitabi) return;
+        var rating = document.getElementById('bookReviewRating').value;
+        var text = document.getElementById('bookReviewText').value.trim();
+        if(!text) return;
+        if(!kitapYorumlari[seciliDetayKitabi]) kitapYorumlari[seciliDetayKitabi] = [];
+        kitapYorumlari[seciliDetayKitabi].push({ rating: rating, text: text });
+        document.getElementById('bookReviewText').value = '';
+        renderBookReviews(seciliDetayKitabi);
+        saveState();
+        adminIstatistikleriniGuncelle();
+      };
+      // Sayfa açılışında katalogu çizip kartları hazırlayan başlangıç çağrıları.
+      initTheme();
+      document.getElementById('themeToggleBtn').onclick = toggleTheme;
+      kategorileriDoldur();
+      kataloguRenderEt();
+      kitapKartlariniTurkcelestir();
+      sepetiGuncelleGosterge();
+      adminIstatistikleriniGuncelle();
+      // Arama formunda kullanılacak sade kitap listesi.
+      var kitaplar = katalogKitaplar.map(function(k){
+        return { ad: k.ad, durum: k.durum };
+      });
+      // Kitap arama formunu dinler ve sonucu modalda gösterir.
+      if(document.getElementById('searchBookForm')) {
+        document.getElementById('searchBookForm').onsubmit = function(e){
+          e.preventDefault();
+          var name = document.getElementById('searchBookName').value.trim();
+          var result = kitaplar.find(function(k){
+            return normalizeSearchText(k.ad) === normalizeSearchText(name);
+          });
+          var resultDiv = document.getElementById('searchBookResult');
+          if(result) {
+            resultDiv.innerHTML = '<strong>'+result.ad+'</strong><br>Durum: <span style=\"font-weight:600;\">'+result.durum+'</span>';
+          } else {
+            resultDiv.innerHTML = 'Kitap bulunamadı.';
+          }
+          resultDiv.style.display = 'block';
+        };
+      }
+    </script>
+</body>
+</html>

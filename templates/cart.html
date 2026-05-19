@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block title %}Sepetim | DIPNOT{% endblock %}
+
+{% block content %}
+<section class="bestseller-section" style="min-height: 55vh;">
+    <div class="bestseller-header">
+        <div class="bestseller-sub">DIPNOT. Kutuphane</div>
+        <h2 class="section-title">SEPETIM</h2>
+    </div>
+
+    {% if request.args.get("paid") %}
+        <div class="status-box success">Odeme basarili. Siparisiniz alinmistir.</div>
+    {% endif %}
+
+    {% if items %}
+        <div class="cart-wrapper">
+            {% for item in items %}
+                <div class="cart-item">
+                    <img src="{{ item['image_url'] }}" alt="{{ item['title'] }}">
+                    <div>
+                        <div class="book-title">{{ item["title"] }}</div>
+                        <div class="book-author">{{ item["author"] }}</div>
+                        <div class="book-price">{{ "%.2f"|format(item["price"]) }} TL</div>
+                        <form method="post" action="{{ url_for('remove_from_cart', index=loop.index0) }}">
+                            <button class="mini-btn danger" type="submit">Sepetten Cikar</button>
+                        </form>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="cart-total">Toplam: {{ "%.2f"|format(total) }} TL</div>
+        <form method="post" action="{{ url_for('checkout') }}">
+            <button class="btn-outline" style="background:#163A5F; color:#fff; border-color:#163A5F;">Odeme Yap</button>
+        </form>
+    {% else %}
+        <div class="status-box">Sepetiniz bos.</div>
+    {% endif %}
+</section>
+{% endblock %}

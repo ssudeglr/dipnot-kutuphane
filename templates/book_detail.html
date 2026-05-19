@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}{{ book["title"] }} | DIPNOT{% endblock %}
+
+{% block content %}
+<section class="event-section">
+    <div class="event-content">
+        <div class="event-image">
+            <img src="{{ book['image_url'] }}" alt="{{ book['title'] }}">
+        </div>
+        <div class="event-info">
+            <div class="event-title">Kitap Detayi</div>
+            <h2 class="event-main">{{ book["title"] }}</h2>
+            <div class="event-author">Yazar: {{ book["author"] }}</div>
+            <div class="event-desc">{{ book["description"] }}</div>
+            <div class="book-price" style="margin: 1rem 0;">{{ "%.2f"|format(book["price"]) }} TL</div>
+            <form method="post" action="{{ url_for('add_to_cart', book_id=book['id']) }}">
+                <button type="submit" class="btn-outline" style="background:#163A5F; color:#fff; border-color:#163A5F;">Sepete Ekle</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

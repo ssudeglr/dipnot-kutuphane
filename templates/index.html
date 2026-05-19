@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}Ana Sayfa | DIPNOT Kutuphane{% endblock %}
+
+{% block content %}
+<header class="hero-section">
+    <div class="hero-bg">
+        <div class="hero-text">
+            <h1>BIR KOLTUK,<br>GUZEL BIR KITAP,<br>VE SEN.</h1>
+            <p>Yeni favori kitabini kesfet, kutuphaneni kolayca yonet.</p>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1519681393784-d120267933ba?auto=format&fit=crop&w=900&q=80" alt="Koltuk ustundeki kitaplar">
+        </div>
+    </div>
+</header>
+
+<section class="bestseller-section" id="bookstore">
+    <div class="bestseller-header">
+        <div class="bestseller-sub">DIPNOT. Kutuphane</div>
+        <h2 class="section-title">EN COK SATANLAR</h2>
+    </div>
+
+    <form method="get" action="{{ url_for('index') }}" class="search-form">
+        <input type="text" name="q" placeholder="Kitap veya yazar ara" value="{{ query }}">
+        <button type="submit">Ara</button>
+    </form>
+
+    <div class="book-carousel">
+        {% for book in bestsellers %}
+        <div class="book-card">
+            <img src="{{ book['image_url'] }}" alt="{{ book['title'] }}">
+            <div class="book-title">{{ book["title"] }}</div>
+            <div class="book-author">{{ book["author"] }}</div>
+            <div class="book-price">{{ "%.2f"|format(book["price"]) }} TL</div>
+            <div class="book-actions">
+                <a class="mini-btn" href="{{ url_for('book_detail', book_id=book['id']) }}">Detayi Gor</a>
+                <form method="post" action="{{ url_for('add_to_cart', book_id=book['id']) }}">
+                    <button type="submit" class="mini-btn primary">Sepete Ekle</button>
+                </form>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="recommended-section">
+    <div class="recommended-header">
+        <div class="recommended-sub">Bu Ayin</div>
+        <h2 class="section-title">ONERILEN KITAPLAR</h2>
+    </div>
+    <div class="recommended-grid">
+        {% for book in recommended %}
+        <div class="recommended-card">
+            <img src="{{ book['image_url'] }}" alt="{{ book['title'] }}">
+            <div class="recommended-title">{{ book["title"] }}</div>
+            <div class="recommended-author">{{ book["author"] }}</div>
+            <div class="book-price">{{ "%.2f"|format(book["price"]) }} TL</div>
+            <div class="book-actions">
+                <a class="mini-btn" href="{{ url_for('book_detail', book_id=book['id']) }}">Detayi Gor</a>
+                <form method="post" action="{{ url_for('add_to_cart', book_id=book['id']) }}">
+                    <button type="submit" class="mini-btn primary">Sepete Ekle</button>
+                </form>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="slogan-section" id="about">
+    <h2 class="big-slogan">COK KITAP DIYE BIR SEY YOKTUR</h2>
+    <div style="max-width:820px; margin:0 auto; line-height:1.6;">
+        Bilginin paylastikca cogaldigina inaniyoruz. Her kitap yeni bir dunyanin kapisidir ve her okur bu sonsuz yolculugun bir parcasidir.
+    </div>
+</section>
+
+<section class="event-section" id="events">
+    <div class="event-content">
+        <div class="event-info">
+            <div class="event-title">Yaklasan Etkinlik</div>
+            <h2 class="event-main">KITAP TANITIMI</h2>
+            <div class="event-desc">AILOO Diyarinin tanitimi</div>
+            <div class="event-author">Yazar: Mark Walker</div>
+            <div class="event-date">12 Temmuz 2035, 19:00</div>
+            <div class="event-location">500 Terry Francois Caddesi, San Francisco, CA, ABD</div>
+        </div>
+        <div class="event-image">
+            <img src="https://images.unsplash.com/photo-1512820790803-83ca734da794?auto=format&fit=crop&w=400&q=80" alt="Kitap tanitimi">
+        </div>
+    </div>
+</section>
+{% endblock %}

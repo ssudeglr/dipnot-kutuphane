@@ -1,0 +1,564 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: #fff;
+    color: #163A5F;
+}
+.navbar {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(22,58,95,0.04);
+    padding: 0 0 0 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.container.nav-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    height: 80px;
+}
+.logo-box {
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', Arial, sans-serif;
+}
+.logo-main {
+    font-weight: 700;
+    font-size: 2rem;
+    background: #163A5F;
+    color: #fff;
+    padding: 0.2rem 0.7rem;
+    border-radius: 4px 0 0 4px;
+    letter-spacing: 2px;
+}
+.logo-sub {
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: #163A5F;
+    border: 2px solid #163A5F;
+    border-left: none;
+    padding: 0.2rem 0.7rem;
+    border-radius: 0 4px 4px 0;
+    letter-spacing: 2px;
+    background: #fff;
+}
+.nav-menu {
+    display: flex;
+    gap: 2.2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-menu li a {
+    text-decoration: none;
+    color: #163A5F;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.nav-menu li a:hover {
+    color: #FFD600;
+}
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+.nav-icon {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 1.1rem;
+}
+.theme-toggle {
+    border: 1px solid #163A5F;
+    background: #fff;
+    color: #163A5F;
+    border-radius: 999px;
+    padding: 0.35rem 0.7rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.theme-toggle:hover {
+    background: #163A5F;
+    color: #fff;
+}
+.nav-login {
+    margin-left: 0.4rem;
+    font-weight: 500;
+}
+
+/* Hero Section */
+.hero-section {
+    background: #fff;
+    padding: 2.5rem 0 0 0;
+}
+.hero-bg {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    min-height: 420px;
+}
+.hero-text {
+    flex: 1;
+    z-index: 2;
+}
+.hero-text h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #163A5F;
+    margin: 0 0 1.2rem 0;
+    line-height: 1.1;
+}
+.hero-text p {
+    font-size: 1.2rem;
+    color: #163A5F;
+    margin-bottom: 0;
+}
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+.hero-image img {
+    max-width: 480px;
+    width: 100%;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px rgba(22,58,95,0.13);
+}
+
+/* Bestseller Carousel */
+.bestseller-section {
+    background: #fff;
+    padding: 2.5rem 0 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bestseller-header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.bestseller-sub {
+    color: #163A5F;
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #163A5F;
+    margin: 0.2rem 0 0 0;
+}
+.book-carousel {
+    display: flex;
+    gap: 2.2rem;
+    overflow-x: auto;
+    padding: 1rem 2rem;
+    scroll-behavior: smooth;
+    justify-content: center;
+}
+.book-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(22,58,95,0.08);
+    min-width: 170px;
+    max-width: 170px;
+    padding: 1.2rem 1rem 1rem 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.book-card img {
+    width: 100px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 0.7rem;
+}
+.book-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #163A5F;
+    margin-bottom: 0.2rem;
+}
+.book-author {
+    font-size: 0.98rem;
+    color: #4a5a6a;
+    margin-bottom: 0.2rem;
+}
+
+/* Recommended Books */
+.recommended-section {
+    background: #163A5F;
+    padding: 2.5rem 0 2.5rem 0;
+}
+.recommended-header {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 1.5rem;
+}
+.recommended-sub {
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+.recommended-section .section-title {
+    color: #fff;
+}
+.recommended-grid {
+    display: flex;
+    gap: 2.2rem;
+    overflow-x: auto;
+    padding: 1rem 2rem;
+    scroll-behavior: smooth;
+    justify-content: center;
+}
+.recommended-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 12px rgba(22,58,95,0.08);
+    min-width: 170px;
+    max-width: 170px;
+    padding: 1.2rem 1rem 1rem 1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+.recommended-card img {
+    width: 100px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 0.7rem;
+}
+.recommended-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #163A5F;
+    margin-bottom: 0.2rem;
+}
+.recommended-author {
+    font-size: 0.98rem;
+    color: #4a5a6a;
+    margin-bottom: 0.2rem;
+}
+
+/* Slogan Section */
+.slogan-section {
+    background: #163A5F;
+    color: #fff;
+    text-align: center;
+    padding: 4rem 0 3rem 0;
+}
+.big-slogan {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+.btn-outline {
+    background: none;
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 0.7rem 2.2rem;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+}
+.btn-outline:hover {
+    background: #FFD600;
+    color: #163A5F;
+    border-color: #FFD600;
+}
+
+/* Event Section */
+.event-section {
+    background: #fff;
+    padding: 3rem 0 2.5rem 0;
+}
+.event-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 3rem;
+}
+.event-info {
+    flex: 1;
+    color: #163A5F;
+}
+.event-title {
+    font-size: 1.1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+.event-main {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+}
+.event-desc {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+.event-author {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+.event-date, .event-location {
+    font-size: 0.98rem;
+    margin-bottom: 0.3rem;
+}
+.event-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+.event-image img {
+    width: 260px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(22,58,95,0.13);
+}
+
+/* Events modal */
+.events-modal-content {
+    background: #fff;
+    border-radius: 12px;
+    max-width: 940px;
+    width: 94%;
+    padding: 1.6rem;
+    box-shadow: 0 8px 32px rgba(22,58,95,0.13);
+    position: relative;
+    max-height: 84vh;
+    overflow: auto;
+}
+.events-modal-title {
+    color: #163A5F;
+    margin: 0 0 1rem 0;
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+}
+.events-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 1rem;
+}
+.event-item-card {
+    border: 1px solid #d7e2ef;
+    border-radius: 10px;
+    padding: 0.9rem;
+    background: #f8fbff;
+}
+.event-item-head {
+    color: #163A5F;
+    font-weight: 700;
+    margin-bottom: 0.4rem;
+}
+.event-item-desc {
+    color: #4a5a6a;
+    font-size: 0.95rem;
+    margin-bottom: 0.45rem;
+}
+.event-item-meta {
+    color: #163A5F;
+    font-size: 0.9rem;
+    margin-bottom: 0.2rem;
+}
+.event-join-btn {
+    margin-top: 0.5rem;
+    border: 1px solid #163A5F;
+    background: #163A5F;
+    color: #fff;
+    border-radius: 6px;
+    padding: 0.35rem 0.55rem;
+    cursor: pointer;
+}
+.event-join-btn:hover {
+    opacity: 0.9;
+}
+
+/* Footer */
+.footer {
+    background: #163A5F;
+    color: #fff;
+    padding: 2.5rem 0 1rem 0;
+}
+.footer-container {
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    gap: 3rem;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footer-col {
+    flex: 1 1 200px;
+    margin-bottom: 1.5rem;
+}
+.footer-logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.footer-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+}
+.footer-bottom {
+    text-align: center;
+    color: #fff;
+    font-size: 0.98rem;
+    margin-top: 2rem;
+    opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .container.nav-flex, .hero-bg, .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 1rem;
+        height: auto;
+    }
+    .hero-bg {
+        flex-direction: column-reverse;
+        min-height: 320px;
+    }
+    .hero-image img {
+        max-width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    .event-content {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+    .footer-container {
+        gap: 1.5rem;
+    }
+}
+@media (max-width: 600px) {
+    .section-title, .big-slogan {
+        font-size: 1.5rem;
+    }
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+    .book-card, .recommended-card {
+        min-width: 120px;
+        max-width: 120px;
+        padding: 0.7rem 0.5rem 0.5rem 0.5rem;
+    }
+    .footer-col {
+        font-size: 0.95rem;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Dark mode overrides */
+body.dark-mode {
+    background: #0f1724;
+    color: #e5edf7;
+}
+body.dark-mode .navbar,
+body.dark-mode .hero-section,
+body.dark-mode .bestseller-section,
+body.dark-mode .event-section {
+    background: #111b2a;
+}
+body.dark-mode .recommended-section,
+body.dark-mode .slogan-section,
+body.dark-mode .footer {
+    background: #0d1522;
+}
+body.dark-mode .logo-sub,
+body.dark-mode .book-card,
+body.dark-mode .recommended-card,
+body.dark-mode .modal > div,
+body.dark-mode #adminPanel > div {
+    background: #1a2638 !important;
+    color: #e5edf7 !important;
+    border-color: #31455f !important;
+}
+body.dark-mode .logo-main {
+    background: #2a4260;
+}
+body.dark-mode .nav-menu li a,
+body.dark-mode .nav-login,
+body.dark-mode .hero-text h1,
+body.dark-mode .hero-text p,
+body.dark-mode .section-title,
+body.dark-mode .bestseller-sub,
+body.dark-mode .book-title,
+body.dark-mode .book-author,
+body.dark-mode .recommended-title,
+body.dark-mode .recommended-author,
+body.dark-mode .event-info,
+body.dark-mode .footer-bottom,
+body.dark-mode .footer-title,
+body.dark-mode .footer-col,
+body.dark-mode .modal h2,
+body.dark-mode .modal h3,
+body.dark-mode .modal div,
+body.dark-mode .modal p,
+body.dark-mode .modal label {
+    color: #e5edf7 !important;
+}
+body.dark-mode .book-meta-badge {
+    background: #2a4260 !important;
+    color: #e5edf7 !important;
+}
+body.dark-mode .book-short-desc {
+    color: #c8d5e6 !important;
+}
+body.dark-mode .book-card,
+body.dark-mode .recommended-card,
+body.dark-mode .hero-image img,
+body.dark-mode .event-image img {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+body.dark-mode .theme-toggle {
+    background: #1a2638;
+    color: #e5edf7;
+    border-color: #4b6485;
+}
+body.dark-mode .events-modal-content {
+    background: #1a2638;
+}
+body.dark-mode .event-item-card {
+    background: #162335;
+    border-color: #2f4560;
+}
+body.dark-mode .event-item-head,
+body.dark-mode .event-item-desc,
+body.dark-mode .event-item-meta {
+    color: #e5edf7;
+}
+body.dark-mode #adminStats {
+    background: #162335 !important;
+}
+body.dark-mode #toastMessage {
+    background: #2a4260 !important;
+}
